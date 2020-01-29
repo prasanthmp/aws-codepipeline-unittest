@@ -7,12 +7,9 @@ phases:
   build: 
     commands: 
       - "dotnet restore"
+      - "dotnet test dataservice.tests"
       - "dotnet publish -o ./publish"
   install: 
     runtime-versions: 
       dotnet: 3.0
-  post_build:
-    run-as: root
-    commands:
-      - "dotnet test dataservice.tests"
 version: 0.2
