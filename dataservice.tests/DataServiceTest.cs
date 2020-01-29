@@ -49,7 +49,7 @@ namespace dataservice.tests
         public void Test5()
         {
             DataService srv = new DataService();
-            var actualResult = srv.GetDisplayText("test");
+            var actualResult = srv.GetDisplayText("");
             var expectedResult = "Hello from ";
             Assert.AreEqual(actualResult, expectedResult);
         }                       
