@@ -14,5 +14,5 @@ phases:
   post_build:
     run-as: root
     commands:
-      - "dotnet test"
+      - "dotnet test dataservice.tests"
 version: 0.2
