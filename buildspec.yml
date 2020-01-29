@@ -1,0 +1,18 @@
+--- 
+artifacts: 
+  base-directory: publish*
+  files: 
+    - "**/*"
+phases: 
+  build: 
+    commands: 
+      - "dotnet restore"
+      - "dotnet publish -o ./publish"
+  install: 
+    runtime-versions: 
+      dotnet: 3.0
+  post_build:
+    run-as: root
+    commands:
+      - "dotnet test"
+version: 0.2
